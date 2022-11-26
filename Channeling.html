@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Make Appointment</title>
+<style>
+img{
+width:400px;
+height:300px;
+border:4px solid black;
+margin:5px;
+background-repeat:no-repeat;
+}
+</style>
+</head>
+<body bgcolor="lightblue">
+<form name="appform" action="Channeling.php" method="POST">
+<table align="center" width="700">
+<tr></tr>
+<tr></tr>
+<tr>
+<td colspan=2 style="color:black;size:16px;text-align:center;text-decoration:underline;">Patient Details</td>
+</tr>
+<tr>
+<td><lable>Patient's Name:</lable></td>
+<td><input type="text" name="pn" id="pn"></td>
+</tr>
+<tr>
+<td><lable>Patient's Age:</lable></td>
+<td><input type="number" name="age" min="1" max="100"></td>
+</tr>
+<tr>
+<td><lable>Gender</lable></td>
+<td><input type="radio" name="gender" id="Male" value="M">Male
+    <input type="radio" name="gender" id="Female" value="F">Female
+</td>
+</tr>
+<tr>
+<td><lable>Contact No:</lable></td>
+<td><input type="text" name="teleno" id="teleno"></td>
+</tr>
+<tr>
+<td><lable>Address:</lable></td>
+<td><input type="text" name="address"></td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr>
+<td colspan=2 style="color:black;size:16px;text-align:center;text-decoration:underline;">Appointment Details</td>
+</tr>
+<tr>
+<td><lable>Specility:</lable></td>
+<td>
+<select name="speciality">
+<option value="heart">Heart Speciality</option>
+<option value="opd">OPD Speciality</option>
+<option value="eye">Eye Speciality</option>
+<option value="psychological">Psychological Speciality</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><lable>Doctor Name:</lable></td>
+<td><input type="text" name="dn" id="dn"></td>
+</tr>
+<tr>
+<td><lable>Appointment Date:</lable></td>
+<td><input type="date" name="appdate"></td>
+</tr>
+<tr>
+<td><lable>Appointment Day:</lable></td>
+<td><input type="text" name="appday"></td>
+</tr>
+<tr>
+<td><lable>Available Time:</lable></td>
+<td><input type="text" name="availablet"></td>
+</tr>
+<tr>
+<td><lable>Reasone for Appointment</lable></td>
+<td><textarea name="reason" rows="10" cols="50">Write here your reason....</textarea></td>
+</tr>
+<tr>
+<td></td>
+<td><button type="submit" name="save"><font size="5" color="blue">Book</font></button>
+
+<td><button type="submit" name="save"><a href="Specialist.html">Available doctor</a></button>
+
+</td>
+</tr>
+</table>
+</form>
+<img src="ch6.jpg">
+<img src="ch7.jpg">
+<img src="ch8.jpg">
+<img src="ch9.jpg">
+</body>
+</html>

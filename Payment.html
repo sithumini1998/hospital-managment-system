@@ -1,0 +1,232 @@
+<html>
+ <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Portal</title>
+        <link rel="stylesheet" href="1.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+	
+<style>
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 9px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+
+}
+
+</style>
+
+
+	<script type="text/javascript" src="Payment.js"></script>
+    </head>
+    <body>
+
+      <form action="Payment.php" method="post" enctype="multipart/form-data">
+      
+        <h1>Payment Portal</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Payment info</legend>
+		  <label for="payment">Payment Type:</label>
+        <select id="payment" name="type">
+          <optgroup label="Select one">
+            <option value="covid_charges">Covid Charges</option>
+            <option value="pcr_test">PCR Tests</option>
+            <option value="consultant_fees">Consultant Fees</option>
+            <option value="lab_receipt">Lab Results</option>
+            <option value="final_bill">Final Bill</option>
+          </optgroup>
+          
+		  
+		
+          
+          
+		  <label for="patient">Patient's Name:</label>
+          <input type="text" id="name" name="name">
+        
+		  
+          <label for="invoice">Invoice No.</label>
+          <input type="text" id="invoice" name="invoice">
+		  
+		  <label for="amount">Amount:</label>
+          <input type="text" id="amount" name="amount">
+        </fieldset>
+        
+        <fieldset>
+          <legend><span class="number">2</span>Payer Info</legend>
+          <label for="p_name">Payer Name:</label>
+          <input type="text" id="p_name" name="payer_name">
+        </fieldset>
+        <fieldset>
+		
+		<label for="p_no">Payer's NIC:</label>
+          <input type="text" id="p_no" name="payer_id">
+		  
+		  <label for="tel_no">Telephone Number:</label>
+          <input type="text" id="tel_no" name="tele">
+		  
+		  <label for="email">E-mail:</label>
+          <input type="text" id="email" name="mail">
+		  
+		  <label for="address">Address:</label>
+          <input type="text" id="address" name="address">
+		  
+		  <label for="terms">Terms of Service:</label>
+          <textarea id="w3review" name="w3review" rows="4" cols="50">
+Payment Terms and Conditions
+
+Introduction
+
+Patients can pay hospital charges by logging onto Asiri Health Online Bill Payment Facility.  This secure payment system is provided by Asiri Health (Asiri Hospital Holdings PLC / Asiri Surgical Hospital PLC / Central Hospital Limited / Asiri Hospital Matara (Pvt) Ltd) and its third party suppliers. The hospital may update these terms from time to time and any changes will be effective immediately on being set out here. Please ensure you are aware of the current terms.
+
+Terms and Conditions
+
+By using the online payment facility on this  website you have indicated that you have accepted these terms. If you do not accept these terms you should not use this online payment facility.
+
+All payments are subject to the following conditions:-
+
+It is important that care is taken when using the online facility to ensure that you provide the correct information. To facilitate this, the payment system requests that you confirm correctness of data prior to proceeding to the next step. Your credit card will be debited once payment is approved.
+
+The hospital cannot accept liability for a payment not reaching the hospital due to you quoting incorrect card details or personal details or invoice number. Neither can we accept liability if payment is refused or declined by the credit card supplier for any reason.
+
+Refund Policy
+
+Any payment made by the customer after accepting the terms & conditions stated herein, will not be refunded due to any reason whatsoever.                                                   
+
+Security
+
+All payment details which are entered through this secure payment gateway are encrypted when you, or the third party making payment, enters them. Communications to and from the service provider's site are encrypted . The hospital shall not be liable for any failure by you or the third party making payment of fees to properly protect data from being seen on the ir screen by other persons or otherwise obtained by such persons, during the online payment process or in respect of any omission to provide accurate information in the course of the online payment process.
+
+Service Provider
+
+Online payments of fees can be made by credit card. These payments are collected by the Service Provider on behalf of the hospital.  The transaction is received and validated by the Service Provider. The client making the application will get an immediate notification to confirm whether or not the card validation was successful. The funds will be transferred from your account
+  </textarea>
+        
+        
+          
+          <div>
+        <label for="terms_and_conditions">I agree to the Terms of Service:</label>
+        <input type="checkbox" id="terms_and_conditions" value="1" onclick="" />
+    </div>
+    
+         <button type="submit" name="submit" >Submit</button> 
+		 
+        
+        </fieldset>
+        
+      </form>
+      
+    </body>
+</html>

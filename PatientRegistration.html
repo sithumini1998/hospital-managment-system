@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Patient Registration</title>
+<style>
+
+
+body {
+font-family: Arial;
+background-color: #FFB6C1;
+padding:0;
+margin:0;
+
+}
+
+.register {
+margin: 20px auto;
+width: 500px;
+
+
+
+}
+
+
+.title {
+text-align: center;
+color:#800000;
+font-size:45px;
+font-weight:bold;
+padding-top:20px;
+}
+
+
+.control-group {
+margin-bottom: 50px;
+
+
+}
+
+input {
+text-align: center;
+border-color:99001A;
+
+border-radius: 5px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 450px;
+
+
+
+}
+
+.btn {
+background-color:#800000;
+  
+  font-size: 16px;
+  line-height: 17px;
+  padding: 10px 0;
+bottom:20px;
+border-radius:20px;
+  width: 600px;
+ 
+
+color:silver;
+ 
+}
+
+.btn:hover {
+  background-color:red	 ;
+}
+
+.already {
+  font-size: 14px;
+  color:#800000;
+  display: block;
+  margin-top: 12px;
+}
+
+.register-field{
+width:600px;
+
+}
+
+.register-field:hover {
+  border-color:red	 ;
+}
+
+  
+</style>
+</head>
+<body>
+
+<section>
+         <h1 class="title">Patient Registration</h1>
+   	
+  <div class="register">
+      <form action="PatientRegistration.php" method="post" class="register-form" >
+        <div class="control-group">
+        <input type="text" class="register-field" name="name" placeholder="Enter your Full Name" required>
+        </div>
+		
+		<div class="control-group">
+        <input type="number" class="register-field" name="age" placeholder="Enter your Age" required>
+        </div>
+		
+		<div class="control-group">
+        <input type="text" class="register-field" name="address" placeholder="Enter your Address" required>
+        </div>
+		
+		<div class="control-group">
+        <input type="text" class="register-field" name="nic" placeholder="Enter your NIC" required>
+        </div>
+		
+		
+	
+		
+		<div class="control-group">
+        <input type="text" class="register-field" name="group" placeholder="Enter your Blood Group" required>
+        </div>
+		
+		
+		
+		<div class="control-group">
+        <input type="txt" class="register-field" name="mobilenumber" placeholder="Enter your Mobile Number" required>
+        </div>
+		
+		<div class="control-group">
+        <input type="email" class="register-field" name="email" placeholder="Enter your Email" required>
+        </div>
+		
+		<div class="control-group">
+		        <input type="txt" class="register-field" name="sequrityquestion" placeholder="Enter Sequrity Question" required>	
+		</div>
+		
+		
+		
+		<div class="control-group">
+		<input type="text" class="register-field" name="answer" placeholder="Enter your Answer" required>
+		</div>
+		
+        <div class="control-group">
+        <input type="password" class="register-field" name="password" placeholder="Enter your Password" required>
+        </div>
+
+        <input type="submit" name="submit" value="Submit" class="btn">
+        
+      </form>
+    </div>
+   </section>
+  
+  <footer>
+  
+  </footer>
+</body>
+
+</html>

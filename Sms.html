@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Patient Contact Details</title>
+<style>
+img{
+width:400px;
+height:300px;
+border:4px solid black;
+margin:5px;
+background-size:cover;
+background-repeat:no-repeat;
+}
+</style>
+</head>
+<body>
+<h1 style="color:blue;font-size:32px;text-align:center;text-decoration:underline;">Patient Contact Details</h1>
+<form action="Sms.php" method="POST">
+<table align="center" width="700">
+<tr>
+<td>From</td>
+<td><input type="email" name="femail" placeholder="example@example.com">
+</td><br>
+</tr>
+<tr>
+<td>Phone Number:</td>
+<td><input type="text" name="phoneno" placeholder="enter 10 digit phoneno"></td><br>
+</tr>
+<tr>
+<td>Carrier:</td>
+<td><input type="text" name="carrier" placeholder="enter the carrier.ex:vtext.com"></td><br>
+</tr>
+<tr>
+<td>Message:</td>
+<td><textarea rows="10" cols="80" name="message"></textarea></td><br>
+</tr>
+<tr>
+<td></td>
+<td><button type="submit" name="save"><font size="5" color="blue">Send</font></button></td>
+</tr>
+</table>
+</form>
+<img src="ch10.jpg">
+<img src="ch11.jpg">
+</body>
+</html>
